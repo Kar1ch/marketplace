@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace/presentaion/pages/home.dart';
+import 'package:marketplace/presentation/pages/home.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async{
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: HomePage(),
+  ));
+
 }
-
