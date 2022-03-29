@@ -32,9 +32,9 @@ class _MainPageState extends State<MainPage>{
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Главная',
-              backgroundColor: Colors.green,
+            icon: Icon(Icons.home),
+            label: 'Главная',
+            backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.apps_outlined),

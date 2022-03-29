@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'presentation/pages/home/home.dart';
+import 'presentation/pages/profile/profile.dart';
 
 void main() {
   runApp(
@@ -17,7 +18,7 @@ class MainPage extends StatefulWidget{
 
 class _MainPageState extends State<MainPage>{
   int _selectedIndex = 0;
-  var pages = [];
+  var pages = [const ProfilePage()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -28,13 +29,6 @@ class _MainPageState extends State<MainPage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: const Text('Marketplace'),
-        actions: <Widget>[
-          IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.white,)),
-        ],
-      ),
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
