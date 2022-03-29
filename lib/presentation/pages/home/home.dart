@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace/presentation/colors.dart';
 
-class HomePage extends StatefulWidget{
+class MainPage extends StatefulWidget{
+  const MainPage({Key? key}) : super(key: key);
+
   @override
-  _HomePageState createState() => _HomePageState();
+  _MainPageState createState() => _MainPageState();
 }
 
-class _HomePageState extends State<HomePage>{
+class _MainPageState extends State<MainPage>{
   int _selectedIndex = 0;
+   var pages = [];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -22,10 +25,10 @@ class _HomePageState extends State<HomePage>{
         backgroundColor: Colors.green,
         title: const Text('Marketplace'),
         actions: <Widget>[
-          IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.white,)),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.search, color: Colors.white,)),
         ],
       ),
-      body: Center(),
+      body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
