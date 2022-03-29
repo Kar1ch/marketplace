@@ -18,7 +18,7 @@ class MainPage extends StatefulWidget{
 
 class _MainPageState extends State<MainPage>{
   int _selectedIndex = 0;
-  var pages = [const ProfilePage()];
+  var pages = [const HomePage(), const ProfilePage()];
 
   void _onItemTapped(int index) {
     setState(() {
